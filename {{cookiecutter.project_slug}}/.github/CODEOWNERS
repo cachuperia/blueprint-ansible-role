@@ -1,0 +1,5 @@
+# https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners#codeowners-syntax
+
+* @{{ cookiecutter.github_username }}
+
+README.md @{{ cookiecutter.github_automation_username }}

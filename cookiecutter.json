@@ -1,0 +1,14 @@
+{
+  "commitlint_bodyMaxLineLength": "100",
+  "full_name": "Iaroslav Russkykh",
+  "git_repo_name": "blueprint-general",
+  "github_automation_username": "um-grande",
+  "github_username": "IaroslavR",
+  "github_organization": "cachuperia",
+  "project_short_description": "Basic language agnostic GitHub repo template.",
+  "project_slug": "{{ cookiecutter.git_repo_name }}",
+  "version": "0.0.0",
+  "_copy_without_render": [
+        ".github/workflows/*"
+    ]
+}
