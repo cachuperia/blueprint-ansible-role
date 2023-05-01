@@ -10,7 +10,7 @@
 
 ## About
 
-Basic language agnostic repo template for [cookiecutter][cook].
+Ansible role repo template for [cookiecutter][cook].
 
 ## Usage
 
