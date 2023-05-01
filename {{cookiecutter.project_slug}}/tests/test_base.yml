@@ -1,0 +1,4 @@
+- name: Base test
+  hosts: all
+  roles:
+    - { role: ../../{{ cookiecutter.git_repo_name }} }

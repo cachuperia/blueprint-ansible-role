@@ -5,6 +5,11 @@ repos:
       - id: check-json
       - id: check-toml
       - id: check-yaml
+        exclude: |
+          (?x)(
+            ^{{cookiecutter.project_slug}}/tests/test_base.yml|
+            ^{{cookiecutter.project_slug}}/meta/main.yml
+          )
       - id: end-of-file-fixer
       - id: no-commit-to-branch
       - id: trailing-whitespace

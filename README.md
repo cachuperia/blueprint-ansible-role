@@ -1,4 +1,4 @@
-# blueprint-general
+# blueprint-ansible-role
 
 ![checks][checks] ![release][release]
 
@@ -15,7 +15,7 @@ Basic language agnostic repo template for [cookiecutter][cook].
 ## Usage
 
 ```shell
-cookiecutter https://github.com/cachuperia/blueprint-general
+cookiecutter https://github.com/cachuperia/blueprint-ansible-role
 ```
 
 ## Contributing
@@ -31,12 +31,17 @@ You can use [this][a] playbook for automated tools installation.
 ### Setup local environment
 
 ```shell
-git clone git@github.com:cachuperia/blueprint-general.git
-cd blueprint-general
+git clone git@github.com:cachuperia/blueprint-ansible-role.git
+cd blueprint-ansible-role
 make init
 ```
 
 Run `make` to list all available targets.
+
+### CD/CI
+
+- `check` GitHub [workflow][wch].
+- `release` GitHub [workflow][wr]. Release commit types: `fix`, `feat`.
 
 [a]: https://github.com/cachuperia/ansible-role-server-bootstrap
 [cc]: https://www.conventionalcommits.org/en/v1.0.0/
@@ -48,5 +53,5 @@ Run `make` to list all available targets.
 [wch]: .github/workflows/checks.yml
 [wr]: .github/workflows/release.yml
 
-[checks]: https://github.com/cachuperia/blueprint-general/actions/workflows/checks.yml/badge.svg
-[release]: https://github.com/cachuperia/blueprint-general/actions/workflows/release.yml/badge.svg
+[checks]: https://github.com/cachuperia/blueprint-ansible-role/actions/workflows/checks.yml/badge.svg
+[release]: https://github.com/cachuperia/blueprint-ansible-role/actions/workflows/release.yml/badge.svg
