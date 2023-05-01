@@ -1,11 +1,11 @@
 {
   "commitlint_bodyMaxLineLength": "100",
   "full_name": "Iaroslav Russkykh",
-  "git_repo_name": "blueprint-general",
+  "git_repo_name": "ansible-role-<name>",
   "github_automation_username": "um-grande",
   "github_username": "IaroslavR",
   "github_organization": "cachuperia",
-  "project_short_description": "Basic language agnostic GitHub repo template.",
+  "project_short_description": "This [Ansible][ans] role is designed to...",
   "project_slug": "{{ cookiecutter.git_repo_name }}",
   "version": "0.0.0",
   "_copy_without_render": [

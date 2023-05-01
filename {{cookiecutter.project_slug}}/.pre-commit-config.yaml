@@ -3,7 +3,6 @@ repos:
     rev: v4.4.0
     hooks:
       - id: check-json
-      - id: check-toml
       - id: check-yaml
       - id: end-of-file-fixer
       - id: no-commit-to-branch
@@ -13,6 +12,10 @@ repos:
     hooks:
       - id: detect-secrets
         args: ['--baseline', '.secrets.baseline']
+  - repo: https://github.com/ansible/ansible-lint.git
+    rev: v6.15.0
+    hooks:
+      - id: ansible-lint
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v9.5.0
     hooks:

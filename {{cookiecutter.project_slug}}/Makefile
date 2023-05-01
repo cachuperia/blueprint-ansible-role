@@ -5,6 +5,8 @@ SHELL := /bin/bash
 MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
+ROOT := $(shell pwd)
+
 .DEFAULT_GOAL = help
 
 ##@ Bootstrap
@@ -29,11 +31,20 @@ init: repo-init  env-init  ## All init steps at once
 check:  ## Run pre-commit against all files
 	pre-commit run --all-files
 
+##@ Tests
+.PONY: test
+
+test:  ## Run all tests
+	$(MAKE) -C ${ROOT}/tests/ base clean
+
 ##@ Miscellaneous
-.PHONY: clean secrets-baseline-create secrets-baseline-audit secrets-update replace-me
+.PHONY: secrets-baseline-create secrets-baseline-audit secrets-update tasks
 
 clean:  ## Clean repo
 	# Delete caches, build artifacts, etc.
+	rm -rf .ansible-roles
+	$(MAKE) -C ${ROOT}/tests/ clean
+
 
 secrets-baseline-create:  ## Create/update .secrets.baseline file
 	detect-secrets scan --baseline .secrets.baseline
@@ -43,6 +54,9 @@ secrets-baseline-audit:  ## Check updated .secrets.baseline file
 	git commit .secrets.baseline --no-verify -m "build(security): update secrets.baseline"
 
 secrets-update: secrets-baseline-create secrets-baseline-audit  ## Update secrets baseline file
+
+tasks:  ## List playbook tasks
+	ansible-playbook playbook.yml --list-tasks
 
 ##@ Helpers
 .PHONY: help
