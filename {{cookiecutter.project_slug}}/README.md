@@ -108,3 +108,5 @@ make test
 
 [checks]: https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.git_repo_name }}/actions/workflows/checks.yml/badge.svg
 [release]: https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.git_repo_name }}/actions/workflows/release.yml/badge.svg
+
+[//]: # (Project cutted from https://github.com/cachuperia/blueprint-ansible-role/tree/v0.1.0)
